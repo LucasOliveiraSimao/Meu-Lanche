@@ -16,7 +16,7 @@
     </fragment>
     <fragment
         android:id="@+id/loginFragment"
-        android:name="com.lucassimao.meulanche.LoginFragment"
+        android:name="com.lucassimao.meulanche.presentation.fragment.LoginFragment"
         android:label="fragment_login"
         tools:layout="@layout/fragment_login" />
 </navigation>

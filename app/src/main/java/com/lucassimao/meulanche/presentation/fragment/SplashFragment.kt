@@ -8,23 +8,25 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
 import com.lucassimao.meulanche.R
+import com.lucassimao.meulanche.databinding.FragmentSplashBinding
 
 class SplashFragment : Fragment() {
+    private lateinit var binding: FragmentSplashBinding
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? {
+    ): View {
+        binding = FragmentSplashBinding.inflate(inflater, container, false)
 
         delayer()
 
-        return inflater.inflate(R.layout.fragment_splash, container, false)
+        return binding.root
     }
 
     private fun delayer() {
         Handler().postDelayed({
             findNavController().navigate(R.id.action_splashFragment_to_loginFragment)
-            findNavController().popBackStack()
         }, 2000)
     }
 

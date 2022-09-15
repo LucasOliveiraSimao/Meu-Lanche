@@ -2,4 +2,13 @@
     <string name="app_name">Meu Lanche</string>
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="app_splash_screen">Tela de abertura do aplicativo</string>
+    <string name="main_image">Imagem principal</string>
+    <string name="keep_connected">Manter conectado</string>
+    <string name="login">Entrar</string>
+    <string name="forgot_password">Esqueceu a senha?</string>
+    <string name="click_here">Clique aqui</string>
+    <string name="create_account">Criar conta</string>
+    <string name="phone">Telefone</string>
+    <string name="password">Senha</string>
+    <string name="my_snack">Meu Lanche</string>
 </resources>
