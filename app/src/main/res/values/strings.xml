@@ -11,4 +11,11 @@
     <string name="phone">Telefone</string>
     <string name="password">Senha</string>
     <string name="my_snack">Meu Lanche</string>
+    <string name="name">Nome</string>
+    <string name="register">Cadastrar</string>
+    <string name="image_establishment">Imagem do estabelecimento</string>
+    <string name="name_establishment">Nome do Estabelecimento</string>
+    <string name="category">Categoria</string>
+    <string name="delivery_time">Tempo de entrega</string>
+    <string name="delivery_fee">Taxa de Entrega</string>
 </resources>
