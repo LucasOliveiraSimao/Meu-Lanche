@@ -20,4 +20,10 @@
         <item name="android:layout_margin">16dp</item>
         <item name="android:textColorHint">@color/black</item>
     </style>
+
+    <style name="ThemeCheckBox" parent="Widget.AppCompat.CompoundButton.CheckBox">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:buttonTint" tools:targetApi="lollipop">@color/colorMain</item>
+    </style>
 </resources>
