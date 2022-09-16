@@ -1,98 +1,183 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:fillViewport="true"
     tools:context=".presentation.fragment.RegisterFragment">
 
-    <androidx.cardview.widget.CardView
-        android:id="@+id/cv_profile"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
-        app:cardCornerRadius="25dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
 
-        <ImageView
-            android:id="@+id/iv_profile"
-            android:layout_width="150dp"
-            android:layout_height="150dp"
-            android:contentDescription="@string/image_establishment"
-            android:src="@drawable/perfil" />
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cv_profile"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            app:cardCornerRadius="25dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
 
-    </androidx.cardview.widget.CardView>
+            <ImageView
+                android:id="@+id/iv_profile"
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                android:contentDescription="@string/image_establishment"
+                android:src="@drawable/profile" />
 
-    <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/til_name_company"
-        style="@style/ThemeTextInputLayout"
-        android:hint="@string/name_establishment"
-        app:endIconMode="custom"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/cv_profile"
-        app:startIconDrawable="@drawable/ic_store">
+        </androidx.cardview.widget.CardView>
 
-        <com.google.android.material.textfield.TextInputEditText
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
-    </com.google.android.material.textfield.TextInputLayout>
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/til_name_company"
+            style="@style/ThemeTextInputLayout"
+            android:hint="@string/name_establishment"
+            app:endIconMode="custom"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/cv_profile"
+            app:startIconDrawable="@drawable/ic_store">
 
-    <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/til_category"
-        style="@style/ThemeTextInputLayout"
-        android:hint="@string/category"
-        app:endIconMode="custom"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/til_name_company"
-        app:startIconDrawable="@drawable/ic_category">
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+        </com.google.android.material.textfield.TextInputLayout>
 
-        <com.google.android.material.textfield.TextInputEditText
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
-    </com.google.android.material.textfield.TextInputLayout>
+        <TextView
+            android:id="@+id/tv_category"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="@string/category"
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+            android:textColor="@color/black"
+            app:layout_constraintStart_toStartOf="@id/til_name_company"
+            app:layout_constraintTop_toBottomOf="@id/til_name_company" />
 
-    <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/til_delivery_time"
-        style="@style/ThemeTextInputLayout"
-        android:hint="@string/delivery_time"
-        app:endIconMode="custom"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/til_category"
-        app:startIconDrawable="@drawable/ic_delivery_time">
+        <CheckBox
+            android:id="@+id/cb_cafeteria"
+            style="@style/ThemeCheckBox"
+            android:text="@string/cafeteria"
+            app:layout_constraintStart_toStartOf="@id/tv_category"
+            app:layout_constraintTop_toBottomOf="@id/tv_category" />
 
-        <com.google.android.material.textfield.TextInputEditText
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
-    </com.google.android.material.textfield.TextInputLayout>
+        <CheckBox
+            android:id="@+id/cb_pizzeria"
+            style="@style/ThemeCheckBox"
+            android:text="@string/pizzeria"
+            app:layout_constraintStart_toStartOf="@id/cb_cafeteria"
+            app:layout_constraintTop_toBottomOf="@id/cb_cafeteria" />
 
-    <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/til_delivery_fee"
-        style="@style/ThemeTextInputLayout"
-        android:hint="@string/delivery_fee"
-        app:endIconMode="custom"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/til_delivery_time"
-        app:startIconDrawable="@drawable/ic_delivery_fee">
+        <CheckBox
+            android:id="@+id/cb_restaurant_and_steakhouse"
+            style="@style/ThemeCheckBox"
+            android:text="@string/restaurant_and_steakhouse"
+            app:layout_constraintStart_toStartOf="@id/cb_pizzeria"
+            app:layout_constraintTop_toBottomOf="@id/cb_pizzeria" />
 
-        <com.google.android.material.textfield.TextInputEditText
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
-    </com.google.android.material.textfield.TextInputLayout>
+        <CheckBox
+            android:id="@+id/cb_acai_iceScream"
+            style="@style/ThemeCheckBox"
+            android:text="@string/acai_iceScream"
+            app:layout_constraintStart_toStartOf="@id/cb_restaurant_and_steakhouse"
+            app:layout_constraintTop_toBottomOf="@id/cb_restaurant_and_steakhouse" />
 
-    <com.google.android.material.button.MaterialButton
-        android:id="@+id/btn_register"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_margin="16dp"
-        android:text="@string/register"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/til_delivery_fee" />
+        <CheckBox
+            android:id="@+id/cb_water_gas"
+            style="@style/ThemeCheckBox"
+            android:text="@string/water_gas"
+            app:layout_constraintStart_toStartOf="@id/cb_acai_iceScream"
+            app:layout_constraintTop_toBottomOf="@id/cb_acai_iceScream" />
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+        <CheckBox
+            android:id="@+id/cb_others"
+            style="@style/ThemeCheckBox"
+            android:text="@string/others"
+            app:layout_constraintStart_toStartOf="@id/cb_water_gas"
+            app:layout_constraintTop_toBottomOf="@id/cb_water_gas" />
+
+        <TextView
+            android:id="@+id/tv_preparation_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="@string/preparation_time"
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+            android:textColor="@color/black"
+            app:layout_constraintStart_toStartOf="@id/cb_others"
+            app:layout_constraintTop_toBottomOf="@id/cb_others" />
+
+        <CheckBox
+            android:id="@+id/cb_from_15_to_25_minutes"
+            style="@style/ThemeCheckBox"
+            android:text="@string/from_15_to_25_minutes"
+            app:layout_constraintStart_toStartOf="@id/tv_preparation_time"
+            app:layout_constraintTop_toBottomOf="@id/tv_preparation_time" />
+
+        <CheckBox
+            android:id="@+id/cb_from_20_to_30_minutes"
+            style="@style/ThemeCheckBox"
+            android:text="@string/from_20_to_30_minutes"
+            app:layout_constraintStart_toStartOf="@id/cb_from_15_to_25_minutes"
+            app:layout_constraintTop_toBottomOf="@id/cb_from_15_to_25_minutes" />
+
+        <CheckBox
+            android:id="@+id/cb_from_30_to_40_minutes"
+            style="@style/ThemeCheckBox"
+            android:text="@string/from_30_to_40_minutes"
+            app:layout_constraintStart_toStartOf="@id/cb_from_20_to_30_minutes"
+            app:layout_constraintTop_toBottomOf="@id/cb_from_20_to_30_minutes" />
+
+        <TextView
+            android:id="@+id/tv_delivery_rate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="@string/delivery_rate"
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+            android:textColor="@color/black"
+            app:layout_constraintStart_toStartOf="@id/cb_from_30_to_40_minutes"
+            app:layout_constraintTop_toBottomOf="@id/cb_from_30_to_40_minutes" />
+
+        <CheckBox
+            android:id="@+id/cb_not_deliver"
+            style="@style/ThemeCheckBox"
+            android:text="@string/we_dont_deliver"
+            app:layout_constraintStart_toStartOf="@id/tv_delivery_rate"
+            app:layout_constraintTop_toBottomOf="@id/tv_delivery_rate" />
+
+        <CheckBox
+            android:id="@+id/cb_free"
+            style="@style/ThemeCheckBox"
+            android:text="@string/free"
+            app:layout_constraintStart_toStartOf="@id/cb_not_deliver"
+            app:layout_constraintTop_toBottomOf="@id/cb_not_deliver" />
+
+        <CheckBox
+            android:id="@+id/cb_from_2_to_4_money"
+            style="@style/ThemeCheckBox"
+            android:text="@string/from_2_to_4_money"
+            app:layout_constraintStart_toStartOf="@id/cb_free"
+            app:layout_constraintTop_toBottomOf="@id/cb_free" />
+
+        <CheckBox
+            android:id="@+id/cb_from_4_to_8_money"
+            style="@style/ThemeCheckBox"
+            android:text="@string/from_4_to_8_money"
+            app:layout_constraintStart_toStartOf="@id/cb_from_2_to_4_money"
+            app:layout_constraintTop_toBottomOf="@id/cb_from_2_to_4_money" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btn_register"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="16dp"
+            android:text="@string/register"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/cb_from_4_to_8_money" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>
