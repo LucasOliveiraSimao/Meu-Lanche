@@ -36,4 +36,9 @@
     <string name="open">Aberto</string>
     <string name="establishment">Hamburgueria</string>
     <string name="category_establishment">Hamburgueria, Pizzaria</string>
+    <string name="search_by_product">Buscar por Produto</string>
+    <string name="image_product">Imagem do produto</string>
+    <string name="product">Americano</string>
+    <string name="description_product">Pão de forma, 2 ovos, queijo, presunto, tomate, alface</string>
+    <string name="price_product">A partir de R$ 10,00</string>
 </resources>
