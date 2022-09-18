@@ -46,6 +46,7 @@ android {
     viewBinding {
         enabled = true
     }
+    namespace 'com.lucassimao.meulanche'
 }
 
 dependencies {
