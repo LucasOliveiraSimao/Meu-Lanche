@@ -7,7 +7,16 @@
 
     <fragment
         android:id="@+id/homeFragment"
-        android:name="meulanche.presentation.fragment.HomeFragment"
+        android:name="meulanche.presentation.fragment.home.HomeFragment"
         android:label="fragment_home"
-        tools:layout="@layout/fragment_home" />
+        tools:layout="@layout/fragment_home">
+        <action
+            android:id="@+id/action_homeFragment_to_productMenuFragment"
+            app:destination="@id/productMenuFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/productMenuFragment"
+        android:name="meulanche.presentation.fragment.productMenu.ProductMenuFragment"
+        android:label="fragment_product_menu"
+        tools:layout="@layout/fragment_product_menu" />
 </navigation>
