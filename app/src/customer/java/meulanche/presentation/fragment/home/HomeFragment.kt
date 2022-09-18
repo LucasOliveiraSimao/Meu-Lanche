@@ -1,13 +1,14 @@
-package meulanche.presentation.fragment
+package meulanche.presentation.fragment.home
 
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
+import androidx.navigation.fragment.findNavController
+import com.lucassimao.meulanche.R
 import com.lucassimao.meulanche.databinding.FragmentHomeBinding
 import meulanche.model.EstablishmentModel
-import meulanche.presentation.EstablishmentAdapter
 
 class HomeFragment : Fragment() {
     private lateinit var binding: FragmentHomeBinding
@@ -25,7 +26,9 @@ class HomeFragment : Fragment() {
     }
 
     private fun setupRecyclerView() {
-        adapter = EstablishmentAdapter()
+        adapter = EstablishmentAdapter(onItemClick = {
+            findNavController().navigate(R.id.action_homeFragment_to_productMenuFragment)
+        })
 
         binding.rvListEstablishment.adapter = adapter
 
