@@ -1,4 +1,4 @@
-package com.lucassimao.meulanche.model
+package meulanche.model
 
 import androidx.recyclerview.widget.DiffUtil
 
