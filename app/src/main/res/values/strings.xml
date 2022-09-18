@@ -16,6 +16,24 @@
     <string name="image_establishment">Imagem do estabelecimento</string>
     <string name="name_establishment">Nome do Estabelecimento</string>
     <string name="category">Categoria</string>
-    <string name="delivery_time">Tempo de entrega</string>
-    <string name="delivery_fee">Taxa de Entrega</string>
+    <string name="preparation_time">Tempo de preparo</string>
+    <string name="delivery_rate">Taxa de Entrega</string>
+    <string name="cafeteria">Lanchonete</string>
+    <string name="pizzeria">Pizzaria</string>
+    <string name="restaurant_and_steakhouse">Restaurante e Churrascaria</string>
+    <string name="acai_iceScream">Açaí/Sorvete</string>
+    <string name="water_gas">Água/Gás</string>
+    <string name="others">Outros</string>
+    <string name="from_15_to_25_minutes">15-25 min</string>
+    <string name="from_20_to_30_minutes">20-30 min</string>
+    <string name="from_30_to_40_minutes">30-40 min</string>
+    <string name="we_dont_deliver">Não fazemos entrega</string>
+    <string name="free">Grátis</string>
+    <string name="from_2_to_4_money">R$ 2,00 a 4,00</string>
+    <string name="from_4_to_8_money">R$ 4,00 a 8,00</string>
+    <string name="home">Home</string>
+    <string name="search_establishment_or_product">Buscar Estabelecimento ou Produto</string>
+    <string name="open">Aberto</string>
+    <string name="establishment">Hamburgueria</string>
+    <string name="category_establishment">Hamburgueria, Pizzaria</string>
 </resources>

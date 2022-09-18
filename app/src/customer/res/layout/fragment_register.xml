@@ -8,7 +8,7 @@
 
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/til_name"
-        style="@style/ThemeTextInputLayout"
+        style="@style/DefaultTextInputLayout"
         android:hint="@string/name"
         app:endIconMode="custom"
         app:layout_constraintEnd_toEndOf="parent"
@@ -23,7 +23,7 @@
 
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/til_phone"
-        style="@style/ThemeTextInputLayout"
+        style="@style/DefaultTextInputLayout"
         android:hint="@string/phone"
         app:endIconMode="custom"
         app:layout_constraintEnd_toEndOf="parent"
@@ -38,7 +38,7 @@
 
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/til_password"
-        style="@style/ThemeTextInputLayout"
+        style="@style/DefaultTextInputLayout"
         android:hint="@string/password"
         app:endIconMode="custom"
         app:layout_constraintEnd_toEndOf="parent"

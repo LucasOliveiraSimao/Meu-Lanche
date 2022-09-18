@@ -14,10 +14,24 @@
         <!-- Customize your theme here. -->
     </style>
 
-    <style name="ThemeTextInputLayout" parent="Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+    <style name="DefaultTextInputLayout" parent="Widget.MaterialComponents.TextInputLayout.OutlinedBox">
         <item name="android:layout_width">0dp</item>
         <item name="android:layout_height">wrap_content</item>
         <item name="android:layout_margin">16dp</item>
         <item name="android:textColorHint">@color/black</item>
+    </style>
+
+    <style name="DefaultCheckBox" parent="Widget.AppCompat.CompoundButton.CheckBox">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:buttonTint" tools:targetApi="lollipop">@color/colorMain</item>
+    </style>
+
+    <style name="DefaultTextColor" parent="Widget.AppCompat.TextView">
+        <item name="android:textColor">@color/black</item>
+    </style>
+
+    <style name="DefaultItemImageView">
+        <item name="android:tint">@color/colorMain</item>
     </style>
 </resources>
