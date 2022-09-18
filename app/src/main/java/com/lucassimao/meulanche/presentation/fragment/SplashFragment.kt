@@ -2,6 +2,7 @@ package com.lucassimao.meulanche.presentation.fragment
 
 import android.os.Bundle
 import android.os.Handler
+import android.os.Looper
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -25,7 +26,7 @@ class SplashFragment : Fragment() {
     }
 
     private fun delayer() {
-        Handler().postDelayed({
+        Handler(Looper.getMainLooper()).postDelayed({
             findNavController().navigate(R.id.action_splashFragment_to_loginFragment)
         }, 2000)
     }
