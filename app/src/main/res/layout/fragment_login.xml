@@ -20,7 +20,7 @@
 
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/til_phone"
-        style="@style/ThemeTextInputLayout"
+        style="@style/DefaultTextInputLayout"
         android:hint="@string/phone"
         app:endIconMode="custom"
         app:layout_constraintEnd_toEndOf="parent"
@@ -35,7 +35,7 @@
 
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/til_password"
-        style="@style/ThemeTextInputLayout"
+        style="@style/DefaultTextInputLayout"
         android:hint="@string/password"
         app:endIconMode="password_toggle"
         app:layout_constraintEnd_toEndOf="parent"
@@ -51,7 +51,7 @@
 
     <CheckBox
         android:id="@+id/cb_keep_connected"
-        style="@style/ThemeCheckBox"
+        style="@style/DefaultCheckBox"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/keep_connected"
