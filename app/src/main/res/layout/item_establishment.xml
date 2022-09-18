@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="8dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="8dp">
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cv_image_establishment"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:cardCornerRadius="25dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <ImageView
+                android:id="@+id/iv_profile_establishment"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:contentDescription="@string/image_establishment"
+                android:src="@drawable/profile"
+                app:layout_constraintStart_toStartOf="parent" />
+
+        </androidx.cardview.widget.CardView>
+
+        <TextView
+            android:id="@+id/tv_state"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:background="@color/colorMain"
+            android:padding="8dp"
+            android:text="@string/open"
+            android:textColor="@color/white"
+            app:layout_constraintEnd_toEndOf="@id/cv_image_establishment"
+            app:layout_constraintStart_toStartOf="@id/cv_image_establishment"
+            app:layout_constraintTop_toBottomOf="@id/cv_image_establishment" />
+
+        <TextView
+            android:id="@+id/tv_name_establishment"
+            style="@style/DefaultTextColor"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            app:layout_constraintStart_toEndOf="@id/cv_image_establishment"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="@string/establishment" />
+
+        <TextView
+            android:id="@+id/tv_category"
+            style="@style/DefaultTextColor"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="@id/tv_name_establishment"
+            app:layout_constraintTop_toBottomOf="@id/tv_name_establishment"
+            tools:text="@string/category_establishment" />
+
+        <ImageView
+            android:id="@+id/iv_delivery_time"
+            style="@style/DefaultItemImageView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_delivery_time"
+            app:layout_constraintBottom_toTopOf="@id/tv_delivery_time"
+            app:layout_constraintEnd_toEndOf="@id/tv_delivery_time"
+            app:layout_constraintStart_toStartOf="@id/tv_name_establishment"
+            app:layout_constraintTop_toBottomOf="@id/tv_category" />
+
+        <TextView
+            android:id="@+id/tv_delivery_time"
+            style="@style/DefaultTextColor"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="@id/tv_name_establishment"
+            app:layout_constraintTop_toBottomOf="@id/iv_delivery_time"
+            tools:text="@string/from_15_to_25_minutes" />
+
+        <ImageView
+            android:id="@+id/iv_delivery_rate"
+            style="@style/DefaultItemImageView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_delivery"
+            app:layout_constraintBottom_toTopOf="@id/tv_delivery_rate"
+            app:layout_constraintEnd_toEndOf="@id/tv_delivery_rate"
+            app:layout_constraintStart_toStartOf="@id/tv_delivery_rate"
+            app:layout_constraintTop_toBottomOf="@id/tv_category" />
+
+        <TextView
+            android:id="@+id/tv_delivery_rate"
+            style="@style/DefaultTextColor"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toEndOf="@id/tv_delivery_time"
+            app:layout_constraintTop_toBottomOf="@id/iv_delivery_rate"
+            tools:text="@string/we_dont_deliver" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.cardview.widget.CardView>
