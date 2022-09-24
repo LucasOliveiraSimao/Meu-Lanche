@@ -1,4 +1,4 @@
-package meulanche.presentation.fragment
+package com.lucassimao.meulanche.presentation.fragment
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -6,8 +6,8 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import com.lucassimao.meulanche.databinding.FragmentHomeBinding
-import meulanche.model.ProductModel
-import meulanche.presentation.ProductAdapter
+import com.lucassimao.meulanche.model.ProductModel
+import com.lucassimao.meulanche.presentation.ProductAdapter
 
 class HomeFragment : Fragment() {
     private lateinit var binding: FragmentHomeBinding

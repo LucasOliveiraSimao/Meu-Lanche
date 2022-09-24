@@ -1,4 +1,4 @@
-package meulanche.presentation.fragment
+package com.lucassimao.meulanche.presentation.fragment
 
 import android.os.Bundle
 import android.view.LayoutInflater
