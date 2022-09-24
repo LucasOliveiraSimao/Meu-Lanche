@@ -109,26 +109,29 @@
             app:layout_constraintStart_toStartOf="@id/cb_others"
             app:layout_constraintTop_toBottomOf="@id/cb_others" />
 
-        <CheckBox
-            android:id="@+id/cb_from_15_to_25_minutes"
-            style="@style/DefaultCheckBox"
-            android:text="@string/from_15_to_25_minutes"
+        <RadioGroup
+            android:id="@+id/rg_preparation_time"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
             app:layout_constraintStart_toStartOf="@id/tv_preparation_time"
-            app:layout_constraintTop_toBottomOf="@id/tv_preparation_time" />
+            app:layout_constraintTop_toBottomOf="@id/tv_preparation_time">
 
-        <CheckBox
-            android:id="@+id/cb_from_20_to_30_minutes"
-            style="@style/DefaultCheckBox"
-            android:text="@string/from_20_to_30_minutes"
-            app:layout_constraintStart_toStartOf="@id/cb_from_15_to_25_minutes"
-            app:layout_constraintTop_toBottomOf="@id/cb_from_15_to_25_minutes" />
+            <RadioButton
+                android:id="@+id/rb_from_15_to_25_minutes"
+                style="@style/DefaultRadioButton"
+                android:text="@string/from_15_to_25_minutes" />
 
-        <CheckBox
-            android:id="@+id/cb_from_30_to_40_minutes"
-            style="@style/DefaultCheckBox"
-            android:text="@string/from_30_to_40_minutes"
-            app:layout_constraintStart_toStartOf="@id/cb_from_20_to_30_minutes"
-            app:layout_constraintTop_toBottomOf="@id/cb_from_20_to_30_minutes" />
+            <RadioButton
+                android:id="@+id/rb_from_20_to_30_minutes"
+                style="@style/DefaultRadioButton"
+                android:text="@string/from_20_to_30_minutes" />
+
+            <RadioButton
+                android:id="@+id/rb_from_30_to_40_minutes"
+                style="@style/DefaultRadioButton"
+                android:text="@string/from_30_to_40_minutes" />
+
+        </RadioGroup>
 
         <TextView
             android:id="@+id/tv_delivery_rate"
@@ -138,36 +141,37 @@
             android:text="@string/delivery_rate"
             android:textAppearance="@style/TextAppearance.AppCompat.Medium"
             android:textColor="@color/black"
-            app:layout_constraintStart_toStartOf="@id/cb_from_30_to_40_minutes"
-            app:layout_constraintTop_toBottomOf="@id/cb_from_30_to_40_minutes" />
+            app:layout_constraintStart_toStartOf="@id/rg_preparation_time"
+            app:layout_constraintTop_toBottomOf="@id/rg_preparation_time" />
 
-        <CheckBox
-            android:id="@+id/cb_not_deliver"
-            style="@style/DefaultCheckBox"
-            android:text="@string/we_dont_deliver"
+        <RadioGroup
+            android:id="@+id/rg_delivery_rate"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
             app:layout_constraintStart_toStartOf="@id/tv_delivery_rate"
-            app:layout_constraintTop_toBottomOf="@id/tv_delivery_rate" />
+            app:layout_constraintTop_toBottomOf="@id/tv_delivery_rate">
 
-        <CheckBox
-            android:id="@+id/cb_free"
-            style="@style/DefaultCheckBox"
-            android:text="@string/free"
-            app:layout_constraintStart_toStartOf="@id/cb_not_deliver"
-            app:layout_constraintTop_toBottomOf="@id/cb_not_deliver" />
+            <RadioButton
+                android:id="@+id/rb_not_deliver"
+                style="@style/DefaultRadioButton"
+                android:text="@string/we_dont_deliver" />
 
-        <CheckBox
-            android:id="@+id/cb_from_2_to_4_money"
-            style="@style/DefaultCheckBox"
-            android:text="@string/from_2_to_4_money"
-            app:layout_constraintStart_toStartOf="@id/cb_free"
-            app:layout_constraintTop_toBottomOf="@id/cb_free" />
+            <RadioButton
+                android:id="@+id/rb_free"
+                style="@style/DefaultRadioButton"
+                android:text="@string/free" />
 
-        <CheckBox
-            android:id="@+id/cb_from_4_to_8_money"
-            style="@style/DefaultCheckBox"
-            android:text="@string/from_4_to_8_money"
-            app:layout_constraintStart_toStartOf="@id/cb_from_2_to_4_money"
-            app:layout_constraintTop_toBottomOf="@id/cb_from_2_to_4_money" />
+            <RadioButton
+                android:id="@+id/rb_from_2_to_4_money"
+                style="@style/DefaultRadioButton"
+                android:text="@string/from_2_to_4_money" />
+
+            <RadioButton
+                android:id="@+id/rb_from_4_to_8_money"
+                style="@style/DefaultRadioButton"
+                android:text="@string/from_4_to_8_money" />
+
+        </RadioGroup>
 
         <com.google.android.material.button.MaterialButton
             android:id="@+id/btn_register"
@@ -177,7 +181,8 @@
             android:text="@string/register"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/cb_from_4_to_8_money" />
+            app:layout_constraintTop_toBottomOf="@id/rg_delivery_rate" />
+
     </androidx.constraintlayout.widget.ConstraintLayout>
 
 </ScrollView>
