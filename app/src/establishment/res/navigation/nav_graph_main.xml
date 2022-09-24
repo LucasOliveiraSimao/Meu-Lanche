@@ -7,7 +7,7 @@
 
     <fragment
         android:id="@+id/homeFragment"
-        android:name="meulanche.presentation.fragment.HomeFragment"
+        android:name="com.lucassimao.meulanche.presentation.fragment.HomeFragment"
         android:label="fragment_home"
         tools:layout="@layout/fragment_home" />
     <fragment
@@ -15,4 +15,9 @@
         android:name="com.lucassimao.meulanche.presentation.fragment.ProfileFragment"
         android:label="fragment_setting"
         tools:layout="@layout/fragment_profile" />
+    <fragment
+        android:id="@+id/insertProductFragment"
+        android:name="com.lucassimao.meulanche.presentation.fragment.InsertProductFragment"
+        android:label="fragment_insert_product"
+        tools:layout="@layout/fragment_insert_product" />
 </navigation>
