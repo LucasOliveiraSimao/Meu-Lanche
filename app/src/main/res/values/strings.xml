@@ -41,4 +41,9 @@
     <string name="product">Americano</string>
     <string name="description_product">Pão de forma, 2 ovos, queijo, presunto, tomate, alface</string>
     <string name="price_product">A partir de R$ 10,00</string>
+    <string name="profile">Perfil</string>
+    <string name="personal_data">Dados Pessoais</string>
+    <string name="change_password">Alterar Senha</string>
+    <string name="delete_account">Excluir conta</string>
+    <string name="log_off">Sair</string>
 </resources>
