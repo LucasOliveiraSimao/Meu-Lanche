@@ -1,11 +1,11 @@
-package meulanche.presentation
+package com.lucassimao.meulanche.presentation
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
 import com.lucassimao.meulanche.databinding.ItemProductBinding
-import meulanche.model.ProductModel
+import com.lucassimao.meulanche.model.ProductModel
 
 class ProductAdapter() :
     ListAdapter<ProductModel, ProductViewHolder>(ProductModel) {
