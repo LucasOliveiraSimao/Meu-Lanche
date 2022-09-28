@@ -7,7 +7,7 @@
 
     <fragment
         android:id="@+id/homeFragment"
-        android:name="meulanche.presentation.fragment.home.HomeFragment"
+        android:name="com.lucassimao.meulanche.presentation.home.HomeFragment"
         android:label="fragment_home"
         tools:layout="@layout/fragment_home">
         <action
@@ -16,12 +16,33 @@
     </fragment>
     <fragment
         android:id="@+id/productMenuFragment"
-        android:name="meulanche.presentation.fragment.productMenu.ProductMenuFragment"
+        android:name="com.lucassimao.meulanche.presentation.productMenu.ProductMenuFragment"
         android:label="fragment_product_menu"
-        tools:layout="@layout/fragment_product_menu" />
+        tools:layout="@layout/fragment_product_menu" >
+        <action
+            android:id="@+id/action_productMenuFragment_to_orderDetailsFragment"
+            app:destination="@id/orderDetailsFragment" />
+    </fragment>
     <fragment
         android:id="@+id/profileFragment"
         android:name="com.lucassimao.meulanche.presentation.fragment.ProfileFragment"
         android:label="fragment_setting"
         tools:layout="@layout/fragment_profile" />
+    <fragment
+        android:id="@+id/orderDetailsFragment"
+        android:name="com.lucassimao.meulanche.presentation.OrderDetailsFragment"
+        android:label="fragment_order_details"
+        tools:layout="@layout/fragment_order_details" >
+        <action
+            android:id="@+id/action_orderDetailsFragment_to_paymentFragment"
+            app:destination="@id/paymentFragment" />
+        <action
+            android:id="@+id/action_orderDetailsFragment_to_productMenuFragment"
+            app:destination="@id/productMenuFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/paymentFragment"
+        android:name="com.lucassimao.meulanche.presentation.PaymentFragment"
+        android:label="fragment_payment"
+        tools:layout="@layout/fragment_payment" />
 </navigation>
