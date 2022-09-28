@@ -1,11 +1,11 @@
-package meulanche.presentation.fragment.home
+package com.lucassimao.meulanche.presentation.home
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
 import com.lucassimao.meulanche.databinding.ItemEstablishmentBinding
-import meulanche.model.EstablishmentModel
+import com.lucassimao.meulanche.model.EstablishmentModel
 
 class EstablishmentAdapter(
     private val onItemClick: (EstablishmentModel) -> Unit,

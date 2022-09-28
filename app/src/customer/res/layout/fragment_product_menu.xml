@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="meulanche.presentation.fragment.productMenu.ProductMenuFragment">
+    tools:context=".presentation.productMenu.ProductMenuFragment">
 
     <SearchView
         android:id="@+id/sv_product_menu"

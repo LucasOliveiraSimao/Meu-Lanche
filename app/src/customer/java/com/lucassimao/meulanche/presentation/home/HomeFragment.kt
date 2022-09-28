@@ -1,4 +1,4 @@
-package meulanche.presentation.fragment.home
+package com.lucassimao.meulanche.presentation.home
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -8,7 +8,7 @@ import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
 import com.lucassimao.meulanche.R
 import com.lucassimao.meulanche.databinding.FragmentHomeBinding
-import meulanche.model.EstablishmentModel
+import com.lucassimao.meulanche.model.EstablishmentModel
 
 class HomeFragment : Fragment() {
     private lateinit var binding: FragmentHomeBinding
