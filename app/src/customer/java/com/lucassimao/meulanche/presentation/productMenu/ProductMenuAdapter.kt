@@ -1,11 +1,11 @@
-package meulanche.presentation.fragment.productMenu
+package com.lucassimao.meulanche.presentation.productMenu
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
 import com.lucassimao.meulanche.databinding.ItemProductMenuBinding
-import meulanche.model.ProductMenuModel
+import com.lucassimao.meulanche.model.ProductMenuModel
 
 class ProductMenuAdapter(
     private val onItemClick: (ProductMenuModel) -> Unit,
@@ -31,6 +31,10 @@ class ProductMenuViewHolder(
             tvNameProduct.text = item.name
             tvDescription.text = item.description
             tvPriceProduct.text = item.price
+        }
+
+        itemView.setOnClickListener {
+            onItemClick(item)
         }
     }
 
